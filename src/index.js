@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('div');
       card.classList.add('card');
       card.textContent = cardData.text;
-      card.id = cardData.id; // Устанавливаем уникальный ID карточки
+      card.id = cardData.id;
       card.draggable = true;
 
       const deleteBtn = document.createElement('span');
@@ -74,9 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const cardText = draggedCard.textContent.replace('✕', '');
 
       const state = loadState();
-      // Удаляем карточку из исходной колонки
       state[fromColumn] = state[fromColumn].filter(card => card.text !== cardText);
-      // Добавляем карточку в целевую колонку с сохранением ID
       state[toColumn].push({ id: draggedCard.id, text: cardText });
 
       saveState(state);
@@ -110,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (text) {
           const listId = button.previousElementSibling.id.split('-')[0];
           const state = loadState();
-          const newCard = { id: generateUniqueId(), text }; // Создаем новую карточку с уникальным ID
+          const newCard = { id: generateUniqueId(), text };
           state[listId].push(newCard);
           saveState(state);
           render();
