@@ -1,0 +1,101 @@
+/* Стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #board {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+  }
+
+  /* Стили для колонок */
+  .column {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .column h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #e6e6e6;
+    padding: 10px;
+    border-radius: 3px;
+  }
+
+  /* Стили для списка карточек */
+  .card-list {
+    min-height: 100px;
+    margin-bottom: 10px;
+  }
+
+  /* Стили для карточек */
+  .card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: grab;
+    position: relative;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .card:hover .delete {
+    display: block;
+  }
+
+  /* Стили для кнопки удаления */
+  .delete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    display: none;
+  }
+
+  /* Стили для кнопки добавления карточек */
+  .add-card,
+  .add-btn {
+    background-color: #5aac44;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 8px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .add-card:hover,
+  .add-btn:hover {
+    background-color: #519639;
+  }
+
+  /* Стили для формы добавления карточки */
+  .add-card-form {
+    display: none;
+    margin-top: 10px;
+  }
+
+  .add-card-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
